@@ -450,14 +450,14 @@ int game_over_AI(int grid[size][size])
 
 void play()
 {
-    //int grid[size][size];
+    int grid[size][size];
 
-    //initial_seed(grid);
+    initial_seed(grid);
 
-    int grid[size][size]={  {2,4,16,32},
+    /*int grid[size][size]={  {2,4,16,32},
                             {8,16,32,16},
                             {4,8,64,8},
-                            {2,4,16,2}   };
+                            {2,4,16,2}   };*/
 
     int moves = 0;
 
@@ -501,7 +501,7 @@ void play()
             club_bottom(grid);
             //Sleep(1000);
             moves++;
-            break;
+            //break;
         }
 
         else if(GetAsyncKeyState(VK_UP) && 0x8000)
@@ -511,7 +511,7 @@ void play()
             club_top(grid);
             //Sleep(1000);
             moves++;
-            break;
+            //break;
         }
 
         else if(GetAsyncKeyState(VK_LEFT) && 0x8000)
@@ -521,7 +521,7 @@ void play()
             club_left(grid);
             //Sleep(1000);
             moves++;
-            break;
+            //break;
         }
 
         else if(GetAsyncKeyState(VK_RIGHT) && 0x8000)
@@ -531,7 +531,7 @@ void play()
             club_right(grid);
             //Sleep(1000);
             moves++;
-            break;
+            //break;
         }
     }
 }
@@ -734,6 +734,8 @@ int main()
 
     //int i=play_AI(0);
     play();
+
+    cout<<endl<<endl<<"OVER!";
 
     _getch();
 
